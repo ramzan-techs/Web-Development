@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to extraordinary hotel in the town"
+    />
+    <meta name="keywords" content="hotel, extraordinary hotel, best hotel" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
+
+    <title>Hotel BT | About</title>
+  </head>
+  <body>
+    <header>
+      <nav id="nav-bar">
+        <div class="container">
+          <h1 class="logo"><a href="index.html">HBT</a></h1>
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a  href="about.html">About</a>
+            </li>
+            <li>
+              <a  class="current" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="contact-form" class="py-3">
+        <div class="container">
+            <h1><span class="primary-text">Contact</span> Us</h1>
+            <p>Please fill out the form to conatct us </p>
+            <form action="process.php">
+                <div class="form-group">
+                    <label for="name" >Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email" >Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="message" >Message</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+
+
+            </form>
+        </div>
+    </section>
+
+    <section id="contact-info" class="bg-dark">
+        <div class="container">
+            <div class="box" >
+                <i class="fa fa-solid fa-hotel fa-3x"></i>
+                <h3>Location</h3>
+                <p>Hotel BT P-213 Susan Road,Faisalabad</p>
+            </div>
+                <div class="box">
+                <i class="fa fa-solid fa-phone fa-3x"></i>
+                <h3>Phone Number</h3>
+                <p>+92300-0000000</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-solid fa-envelope fa-3x"></i>
+                <h3>Email Address</h3>
+                <p>conatct@hbt.com</p>
+            </div>
+        </div>
+    </section>
+
+  
+   
+
+    <footer id="main-footer">
+      <p>Hotel BT &copy; All Rights Reserved</p>
+    </footer>
+  </body>
+</html>

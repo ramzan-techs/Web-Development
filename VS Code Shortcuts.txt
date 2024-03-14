@@ -1,0 +1,9 @@
+shift + alt + DownArrow ==> to copy current line downward
+
+ctrl + nextArrow ==> to move ahead word by word
+
+ctrl + Enter ==> to go to new empty line when in middle of above line 
+
+Alt + upArrow or downArrow ==> to move current line upward and downward respectively
+
+ctrl + D ==> if you select one string and want to select other matching string
