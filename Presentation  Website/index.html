@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Presentation Website</title>
+  </head>
+  <body>
+    <section class="page" id="page-1">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident vero
+        molestiae nemo? Molestias eveniet quidem distinctio perferendis ducimus
+        numquam nostrum.
+      </p>
+      <div>
+        <a href="#page-2" class="btn"
+          >Next Page <i class="fa fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+    <section class="page" id="page-2">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident vero
+        molestiae nemo? Molestias eveniet quidem distinctio perferendis ducimus
+        numquam nostrum.
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark"
+          >Previuos Page <i class="fa fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-3" class="btn"
+          >Next Page <i class="fa fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+    <section class="page" id="page-3">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident vero
+        molestiae nemo? Molestias eveniet quidem distinctio perferendis ducimus
+        numquam nostrum.
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark"
+          >Previous Page <i class="fa fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-4" class="btn"
+          >Next Page <i class="fa fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+    <section class="page" id="page-4">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident vero
+        molestiae nemo? Molestias eveniet quidem distinctio perferendis ducimus
+        numquam nostrum.
+      </p>
+      <div>
+        <a href="#page-3" class="btn"
+          >Previous Page <i class="fa fas fa-arrow-circle-up"></i
+        ></a>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(".btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+          const hash = this.hash;
+          $("html , body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
