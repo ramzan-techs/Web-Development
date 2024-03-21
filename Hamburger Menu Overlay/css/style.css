@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color :rgba(13,110,139,0.75);
+    --secondary-color :rgba(229,148,0,0.9);
+    --overlay-color :rgba(24,39,51,0.85);
+    --menu-speed : 0.75s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto' , sans-serif;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 3rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+#showcase {
+    background: var(--primary-color);
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+#showcase:before {
+    content: '';
+    background: url('../img/showcase.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#showcase .showcase-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+#showcase h1 {
+    font-size: 4rem;   
+}
+
+#showcase p {
+    font-size: 1.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.3rem;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    max-width: fit-content;
+    transition: all 0.7s ease-in;
+    
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+a {
+    text-decoration: none;
+}
