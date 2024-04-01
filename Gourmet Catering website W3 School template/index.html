@@ -7,6 +7,16 @@
     <meta name="keywords" content="food , gourmet foods , gourmet catering" />
     <title>Gourmet Catering</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:960px)"
+      href="css/tab.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:850px)"
+      href="css/mobile.css"
+    />
   </head>
   <body>
     <header id="main-header">
@@ -15,9 +25,9 @@
           <div class="nav-bar-content">
             <p><a href="#">Gourmet au Catering</a></p>
             <ul>
-              <li><a href="#about">About</a></li>
-              <li><a href="#Menu">Menu</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about" class="btn">About</a></li>
+              <li><a href="#menu" class="btn">Menu</a></li>
+              <li><a href="#contact" class="btn">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -31,33 +41,31 @@
       </div>
     </main>
     <section id="about" class="section">
-      <div class="container">
-        <div class="about-content row">
-          <div class="about-content-left">
-            <img src="images/about.jpg" alt="About Image" />
-          </div>
+      <div class="about-content row">
+        <div class="about-content-left">
+          <img src="images/about.jpg" alt="About Image" />
+        </div>
 
-          <div class="about-content-right column ai-c">
-            <h2 class="section-heading">About Catering</h2>
-            <h2 class="section-sub-heading">Tradition since 1889</h2>
-            <p>
-              The Catering was founded in blabla by Mr. Smith in lorem ipsum
-              dolor sit amet, consectetur adipiscing elit consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              iruredolor in reprehenderit in voluptate velit esse cillum dolore
-              eu fugiat nulla pariatur.We only use
-              <span>seasonal</span> ingredients.
-            </p>
-            <p>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum consectetur adipiscing
-              elit, sed do eiusmod temporincididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
+        <div class="about-content-right column ai-c">
+          <h2 class="section-heading">About Catering</h2>
+          <h2 class="section-sub-heading">Tradition since 1889</h2>
+          <p>
+            The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor
+            sit amet, consectetur adipiscing elit consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur.We only use
+            <span>seasonal</span> ingredients.
+          </p>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum consectetur adipiscing
+            elit, sed do eiusmod temporincididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
         </div>
       </div>
     </section>
@@ -85,8 +93,9 @@
           <h2 class="section-sub-heading">Blueberry Pancakes</h2>
           <p>With syrup, butter and lots of berries 8.50</p>
         </div>
-        <div class="menu-content-right"></div>
-        <img src="images/menu.jpg" alt="Menu Image" />
+        <div class="menu-content-right">
+          <img src="images/menu.jpg" alt="Menu Image" />
+        </div>
       </div>
     </section>
     <hr class="section" />
@@ -128,5 +137,27 @@
     <footer>
       <p>Powered By Ramzan</p>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(".btn").on("click", function (e) {
+        if (this.hash !== "") {
+          e.preventDefault();
+          const hash = this.hash;
+          const navHeight = $("#nav-bar").outerHeight();
+          $("html , body").animate(
+            {
+              scrollTop: $(hash).offset().top - navHeight,
+            },
+            800
+          );
+        }
+      });
+    </script>
   </body>
 </html>

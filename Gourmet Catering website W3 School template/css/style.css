@@ -50,6 +50,7 @@ img {
 
 .section {
     margin: 6rem;
+    max-width: 100vw;
 }
 
 .section-heading {
@@ -152,12 +153,19 @@ header {
 
 /* about section */
 
+.about-content {
+    width: 100%;
+}
 
+.about-content-left {
+    width: 50%;
+}
 .about-content img {
-    width: 500px;
+    width: 100%;
     opacity: 0.8;
 }
 .about-content .about-content-right {
+    width: 50%;
    margin-left: 2rem;
    padding: 0 2.5rem;
 }
@@ -181,14 +189,21 @@ header {
 
 /* menu section */
 
+.menu-content {
+    width: 100%;
+}
+
+.menu-content-right {
+    width: 50%;
+}
 .menu-content img {
-    width: 600px;
     opacity: 0.8;
 }
 
 .menu-content .menu-content-left {
-   margin-left: 2rem;
-   padding: 0 2.5rem;
+    width: 50%;
+   /* margin-left: 2rem; */
+   padding: 0 2rem;
 }
 
 .menu-content p {
@@ -240,3 +255,6 @@ footer {
     justify-content: center;
     font-size: 1.4rem;
 }
+
+
+
